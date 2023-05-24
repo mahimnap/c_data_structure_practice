@@ -1,34 +1,29 @@
 CC = gcc
 CFLAGS = -std=c99 -Wall -pedantic
 
-all: htest1 htest2 htest3 htest4 hash.o 
+all: test1 test2 test3
 
-clean:
-	rm *.o htest1 htest2 htest3 htest4
-	
-htest1: htest1.o hash.o 
-	$(CC) $(CFLAGS) htest1.o hash.o -o htest1
-	
-htest2: htest2.o hash.o 
-	$(CC) $(CFLAGS) htest2.o hash.o -o htest2
-	
-htest3: htest3.o hash.o 
-	$(CC) $(CFLAGS) htest3.o hash.o -o htest3
-	
-htest4: htest4.o hash.o 
-	$(CC) $(CFLAGS) htest4.o hash.o -o htest4
-	
-hash.o: hash.c hash.h
-	$(CC) $(CFLAGS) -c hash.c -o hash.o
-	
-htest1.o: htest1.c hash.h
-	$(CC) $(CFLAGS) -c htest1.c -o htest1.o
+clean: 
+	rm *.o test1 test2 test3 
 
-htest2.o: htest2.c hash.h
-	$(CC) $(CFLAGS) -c htest2.c -o htest2.o
+test1: test1.o list.o
+	$(CC) $(CFLAGS) test1.o list.o -o test1
 	
-htest3.o: htest3.c hash.h
-	$(CC) $(CFLAGS) -c htest3.c -o htest3.o
+test2: test2.o list.o
+	$(CC) $(CFLAGS) test2.o list.o -o test2
+	
+test3: test3.o list.o
+	$(CC) $(CFLAGS) test3.o list.o -o test3
 
-htest4.o: htest4.c hash.h
-	$(CC) $(CFLAGS) -c htest4.c -o htest4.o
+list.o: list.c list.h
+	$(CC) $(CFLAGS) -c list.c -o list.o
+	
+test1.o: test1.c list.h
+	$(CC) $(CFLAGS) -c test1.c -o test1.o
+	
+test2.o: test2.c list.h
+	$(CC) $(CFLAGS) -c -DLIST test2.c -o test2.o
+	
+test3.o: test3.c list.h
+	$(CC) $(CFLAGS) -c test3.c -o test3.o
+

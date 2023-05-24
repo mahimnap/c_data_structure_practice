@@ -1,53 +1,94 @@
-Found hash.c
+Found list.c
 Compiling
-Found hash.o
+Found list.o
 Compilation succeeded
-Compiling and linking gradeA5_newPerformance
-Found gradeA5_newPerformance
+Compiling and linking gradeA3_newPerformance
+Found gradeA3_newPerformance
 Compilation succeeded
 newPerformance passed
-Compiling and linking gradeA5_createTable
-Found gradeA5_createTable
+Compiling and linking gradeA3_push
+Found gradeA3_push
 Compilation succeeded
-createTable passed
-Compiling and linking gradeA5_addElement
-Found gradeA5_addElement
+push passed
+push passed
+Compiling and linking gradeA3_readHead
+Found gradeA3_readHead
 Compilation succeeded
-addElement passed
-addElement passed
-addElement passed
-Compiling and linking gradeA5_getIdx
-Found gradeA5_getIdx
+readHead passed
+Compiling and linking gradeA3_pop
+Found gradeA3_pop
 Compilation succeeded
-getIdx passed
-getIdx passed
-getIdx passed
-getIdx passed
-Compiling and linking gradeA5_getElement
-Found gradeA5_getElement
+pop passed
+pop passed
+Compiling and linking gradeA3_next
+Found gradeA3_next
 Compilation succeeded
-getElement passed
-Compiling and linking gradeA5_removeElement
-Found gradeA5_removeElement
+next passed
+Compiling and linking gradeA3_isEmpty
+Found gradeA3_isEmpty
 Compilation succeeded
-removeElement failed
-  '3-16:1:0-0\n'!='3-14:1:0-0\n'
-Compiling and linking gradeA5_freeTable
-Found gradeA5_freeTable
+isEmpty passed
+Compiling and linking gradeA3_freeList
+Found gradeA3_freeList
 Compilation succeeded
-freeTable passed
-Compiling and linking gradeA5_hashAccuracy
-Found gradeA5_hashAccuracy
+freeList passed
+freeList passed
+Compiling and linking gradeA3_readItem
+Found gradeA3_readItem
 Compilation succeeded
-hashAccuracy passed
-hashAccuracy passed
-Compiling and linking gradeA5_rehash
-Found gradeA5_rehash
+readItem passed
+Compiling and linking gradeA3_appendItem
+Found gradeA3_appendItem
 Compilation succeeded
-rehash passed
-rehash passed
+appendItem passed
+Compiling and linking gradeA3_insertItem
+Found gradeA3_insertItem
+Compilation succeeded
+insertItem passed
+insertItem passed
+Compiling and linking gradeA3_prependItem
+Found gradeA3_prependItem
+Compilation succeeded
+prependItem passed
+Compiling and linking gradeA3_deleteItem
+Found gradeA3_deleteItem
+Compilation succeeded
+deleteItem failed
+  'David Doodleboop\nChino Dookie\nMartin Fresca\n4:6:4:4\n'!='David Doodleboop\nChino Dookie\nMartin Fresca\n4:5:4:4\n'
+Compiling and linking gradeA3_findItem
+Found gradeA3_findItem
+Compilation succeeded
+findItem passed
+Valgrind found errors:
+  ==29234== Memcheck, a memory error detector
+  ==29234== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+  ==29234== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+  ==29234== Command: ./gradeA3_findItem Paris
+  ==29234== 
+  ==29234== 
+  ==29234== HEAP SUMMARY:
+  ==29234==     in use at exit: 128 bytes in 1 blocks
+  ==29234==   total heap usage: 304 allocs, 303 frees, 36,968 bytes allocated
+  ==29234== 
+  ==29234== 128 bytes in 1 blocks are definitely lost in loss record 1 of 1
+  ==29234==    at 0x483577F: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+  ==29234==    by 0x109BEA: findItem (in /home/socs/Grading/Repos/A3/mpyakury/gradeA3_findItem)
+  ==29234==    by 0x10960A: main (in /home/socs/Grading/Repos/A3/mpyakury/gradeA3_findItem)
+  ==29234== 
+  ==29234== LEAK SUMMARY:
+  ==29234==    definitely lost: 128 bytes in 1 blocks
+  ==29234==    indirectly lost: 0 bytes in 0 blocks
+  ==29234==      possibly lost: 0 bytes in 0 blocks
+  ==29234==    still reachable: 0 bytes in 0 blocks
+  ==29234==         suppressed: 0 bytes in 0 blocks
+  ==29234== 
+  ==29234== For counts of detected and suppressed errors, rerun with: -v
+  ==29234== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+findItem passed
+findItem passed
+findItem passed
+findItem passed
 Found makefile
 Correct options
 Comments
-Indentation levels are: ['', '\t', '\t\t', '\t\t\t', '\t\t\t\t', '\t\t\t\t\t', '\t\t\t\t\t\t', '\t\t\t\t\t\t\t\t', ' ']
-Assignment submitted by socs <socs@socsvm.local> at: Mon Nov 9 04:49:29 2020
+Indentation levels are: ['', '\t', '\t\t', '\t\t\t']
